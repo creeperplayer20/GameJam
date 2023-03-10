@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         {
             if (value < 0)
                 Level = 0;
-            if (value >= 20)
+            if (value > 20)
                 Level = 20;
         }
     }
