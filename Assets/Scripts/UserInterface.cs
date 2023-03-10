@@ -1,5 +1,8 @@
-﻿class UserInterface
-{
+﻿using System;
+using UnityEngine;
 
+class UserInterface : Player
+{
+    
 }
 
