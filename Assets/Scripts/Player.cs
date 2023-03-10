@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField]
     private int hp;
-
-   public int HP
-    {
-        protected get => HP;
         
+    public int HP
+    {
+        get => hp;
+
         set
         {
             if (value < 0)
-                HP = 0;
+                hp = 0;
             if (value > 0)
-                HP = 100;
+                hp = 100;
 
-            HP = value;
+            hp = value;
         }
     }
 
@@ -47,6 +48,5 @@ public class Player : MonoBehaviour
     void LevelUp(int levels)
     {
         Level = Level + levels;
-        
     }
 }
