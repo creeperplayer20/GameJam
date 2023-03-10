@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+<<<<<<< HEAD
     [SerializeField]
     private int hp;
+=======
+    private int hp => HP;
+
+   public int HP
+    {
+        protected get => HP;
+>>>>>>> c367ad4ac5e2b1b76575fa44b2b76be8ca184c5e
         
     public int HP
     {
@@ -22,7 +30,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private int level;
+    private int level => Level;
 
     int Level
     {
