@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    int HP
+    private int hp;
+
+   public int HP
     {
-        get
-        {
-            return HP;
-        }
+        protected get => HP;
+        
         set
         {
             if (value < 0)
@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
             HP = value;
         }
     }
+
+    private int level;
 
     int Level
     {
@@ -45,5 +47,6 @@ public class Player : MonoBehaviour
     void LevelUp(int levels)
     {
         Level = Level + levels;
+        
     }
 }
