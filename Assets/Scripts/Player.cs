@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private int hp;
+    private int hp => HP;
 
    public int HP
     {
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private int level;
+    private int level => Level;
 
     int Level
     {
