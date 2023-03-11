@@ -7,9 +7,6 @@ using TMPro;
 public class WeaponDisplay : MonoBehaviour
 {
     [SerializeField]
-    Transform weaponInfo;
-
-    [SerializeField]
     TMP_Text ammoCount;
 
     [SerializeField]
