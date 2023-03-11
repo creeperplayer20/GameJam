@@ -1,5 +1,4 @@
 using System.Collections;
-﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -18,6 +17,7 @@ class UserInterface : Player
 
     private void Update()
     {
+        UpdateHp();
     }
 
     void UpdateHp()
