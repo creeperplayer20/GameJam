@@ -3,7 +3,10 @@ using System.Collections;
 
 [RequireComponent (typeof (GravityBody))]
 public class FirstPersonController : MonoBehaviour {
-	
+
+	[SerializeField]
+	Player player;
+
 	// public vars
 	public float mouseSensitivityX = 1;
 	public float mouseSensitivityY = 1;
@@ -12,7 +15,6 @@ public class FirstPersonController : MonoBehaviour {
 	public LayerMask groundedMask;
 	
 	// System vars
-	bool grounded;
 	Vector3 moveAmount;
 	Vector3 smoothMoveVelocity;
 	float verticalLookRotation;
@@ -28,7 +30,6 @@ public class FirstPersonController : MonoBehaviour {
 	}
 	
 	void Update() {
-		
 		// Look rotation:
 		transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivityX);
 		verticalLookRotation += Input.GetAxis("Mouse Y") * mouseSensitivityY;
@@ -42,25 +43,6 @@ public class FirstPersonController : MonoBehaviour {
 		Vector3 moveDir = new Vector3(inputX,0, inputY).normalized;
 		Vector3 targetMoveAmount = moveDir * walkSpeed;
 		moveAmount = Vector3.SmoothDamp(moveAmount,targetMoveAmount,ref smoothMoveVelocity,.15f);
-		
-		// Jump
-		if (Input.GetButtonDown("Jump")) {
-			if (grounded) {
-				rigidbody.AddForce(transform.up * jumpForce);
-			}
-		}
-		
-		// Grounded check
-		Ray ray = new Ray(transform.position, -transform.up);
-		RaycastHit hit;
-		
-		if (Physics.Raycast(ray, out hit, 1 + .1f, groundedMask)) {
-			grounded = true;
-		}
-		else {
-			grounded = false;
-		}
-		
 	}
 	
 	void FixedUpdate() {
