@@ -20,7 +20,7 @@ class UserInterface : Player
     {
     }
 
-    void UpdateHp()
+    public void UpdateHp()
     {
         textHp.text = "♥ " + HP;
     }
