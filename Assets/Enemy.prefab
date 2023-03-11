@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8705813372307919760}
   - component: {fileID: -5074045554531076053}
   - component: {fileID: -1733774622674720609}
+  - component: {fileID: 2028892419367832363}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -79,6 +80,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 0}
+--- !u!64 &2028892419367832363
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2196537601910516123}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &2598237183535055583
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +115,7 @@ GameObject:
   - component: {fileID: 8518259860509508628}
   - component: {fileID: 9004658104279381501}
   - component: {fileID: 6368007645142280968}
+  - component: {fileID: 9044501199112844089}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -198,6 +222,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -80
+--- !u!65 &9044501199112844089
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2598237183535055583}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2981486951002280329
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +257,7 @@ GameObject:
   - component: {fileID: 2151350792441859840}
   - component: {fileID: 3517626089008616115}
   - component: {fileID: 1315903381975903343}
+  - component: {fileID: 4217618771734075028}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -345,6 +391,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 6368007645142280968}
+--- !u!65 &4217618771734075028
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2981486951002280329}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4634514794404658426
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +426,7 @@ GameObject:
   - component: {fileID: 7509500617543963206}
   - component: {fileID: 4400489984544955044}
   - component: {fileID: 4453466444376873352}
+  - component: {fileID: 5401661153102056589}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -492,6 +560,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 6368007645142280968}
+--- !u!65 &5401661153102056589
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634514794404658426}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6397697312966579714
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +595,7 @@ GameObject:
   - component: {fileID: 7304366969638354126}
   - component: {fileID: 893924304872346169}
   - component: {fileID: 1891234695746630137}
+  - component: {fileID: 5358923802669376583}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -639,6 +729,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 6368007645142280968}
+--- !u!65 &5358923802669376583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6397697312966579714}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7426874617477729989
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +764,7 @@ GameObject:
   - component: {fileID: 4401752333450030055}
   - component: {fileID: 4797582646304483884}
   - component: {fileID: 5399566293611819821}
+  - component: {fileID: 4799470423279309850}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -786,6 +898,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 6368007645142280968}
+--- !u!65 &4799470423279309850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7426874617477729989}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8196287900446085465
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +933,7 @@ GameObject:
   - component: {fileID: 947864716752828850}
   - component: {fileID: 5905288140303468545}
   - component: {fileID: 2408819396581135340}
+  - component: {fileID: 8078841409198018925}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -933,3 +1067,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 6368007645142280968}
+--- !u!65 &8078841409198018925
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8196287900446085465}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

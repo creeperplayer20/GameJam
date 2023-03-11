@@ -6,6 +6,10 @@ public class Enemy : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "bullet") { }
+        if (collision.collider.tag == "bullet")
+        {
+            Debug.Log("shot");
+            Destroy(this.gameObject);
+        }
     }
 }
