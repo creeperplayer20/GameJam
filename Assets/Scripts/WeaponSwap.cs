@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 public class WeaponSwap : MonoBehaviour
 {
     public event Action<Weapon> weaponChanged;
 
     [SerializeField]
-    List<Weapon> weapons;
-    
+    public List<Weapon> Weapon;
+
     // Start is called before the first frame update
     void Start()
     {
-        weapons = GetComponentsInChildren<Weapon>().ToList();
+        Weapon = GetComponentsInChildren<Weapon>().ToList();
         ActivateWeapon(0);
         //weapons.Average(weapon => weapon.pocetNaboju);
         //weapons.Count(weapon => weapon.pocetNaboju > 5);
@@ -26,14 +25,14 @@ public class WeaponSwap : MonoBehaviour
         // deaktivace a pak aktivace s indexem z parametru.
         // weapons.ForEach(weapon => { weapon.gameObject.SetActive(false); });
 
-        foreach (Weapon weapon in weapons)
+        foreach (Weapon weapon in Weapon)
         {
             weapon.gameObject.SetActive(false);
         }
 
-        weapons[index].gameObject.SetActive(true);
+        Weapon[index].gameObject.SetActive(true);
 
-        weaponChanged?.Invoke(weapons[index]);
+        weaponChanged?.Invoke(Weapon[index]);
     }
 
     // Update is called once per frame
