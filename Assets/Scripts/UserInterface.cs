@@ -15,6 +15,7 @@ class UserInterface : Player
 
     private void Update()
     {
+        UpdateHp();
     }
 
     void UpdateHp()
