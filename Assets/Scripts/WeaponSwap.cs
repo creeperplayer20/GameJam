@@ -8,13 +8,14 @@ using System.Runtime.InteropServices.WindowsRuntime;
 public class WeaponSwap : MonoBehaviour
 {
     public event Action<Weapon> weaponChanged;
-
     List<Weapon> weapons;
-    
+    public List<Weapon> Weapon
+    {
+        get { if (weapons == null) { weapons = GetComponentsInChildren<Weapon>(true).ToList(); } return weapons; }
+    }
     // Start is called before the first frame update
     void Start()
     {
-        weapons = GetComponentsInChildren<Weapon>().ToList();
         ActivateWeapon(0);
         //weapons.Average(weapon => weapon.pocetNaboju);
         //weapons.Count(weapon => weapon.pocetNaboju > 5);
@@ -23,12 +24,7 @@ public class WeaponSwap : MonoBehaviour
     private void ActivateWeapon(int index)
     {
         // deaktivace a pak aktivace s indexem z parametru.
-        // weapons.ForEach(weapon => { weapon.gameObject.SetActive(false); });
-
-        foreach (Weapon weapon in weapons)
-        {
-            weapon.gameObject.SetActive(false);
-        }
+        weapons.ForEach(weapon => { weapon.gameObject.SetActive(false); });
 
         weapons[index].gameObject.SetActive(true);
 
