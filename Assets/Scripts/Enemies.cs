@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemies : MonoBehaviour
 {
-    List<Enemy> enemies = new List<Enemy>();
+    List<Enemies> enemies = new List<Enemies>();
 
     
 
