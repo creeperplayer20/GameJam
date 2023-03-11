@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Weapons : MonoBehaviour
+public abstract class Weapon : MonoBehaviour
 {
-    public event Action<Weapons> AmmoCountChanged;
+    public event Action<Weapon> AmmoCountChanged;
 
     [SerializeField]
     protected int ammoCount;
@@ -39,11 +39,6 @@ public abstract class Weapons : MonoBehaviour
     [SerializeField]
     protected Transform bulletSpawnPoint;
 
-    [SerializeField]
-    protected Color color;
-
-    public Color Color => color;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -65,27 +60,20 @@ public abstract class Weapons : MonoBehaviour
 
     private void UpdateTimers()
     {
-
         currentShootCooldown -= Time.deltaTime;
 
         if (IsReloading)
         {
             currentReloadTime -= Time.deltaTime;
             if (currentReloadTime < 0)
-            {
                 Reload();
-            }
         }
     }
     protected virtual void ProcessShootingInput()
     {
         if (Input.GetButtonDown("Fire1"))
-        {
             if (CurrentAmmoCount > 0 && currentShootCooldown <= 0 && !IsReloading)
-            {
                 Shoot();
-            }
-        }
     }
 
     private void ProcessReloadInput()
@@ -94,7 +82,6 @@ public abstract class Weapons : MonoBehaviour
         {
             currentReloadTime = reloadTime;
             Reload();
-
         }
     }
 
@@ -103,6 +90,7 @@ public abstract class Weapons : MonoBehaviour
         CurrentAmmoCount--;
 
         var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
+        Destroy(bullet, 5f);
         bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
 
         currentShootCooldown = shootDelay;

@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    List<Weapons> weapons = new List<Weapons>();
+    List<Weapon> weapons = new List<Weapon>();
     List<Potions> potions = new List<Potions>();
 
-    void AddToInventory(Weapons weapon)
+    void AddToInventory(Weapon weapon)
     {
         weapons.Add(weapon);
     }
