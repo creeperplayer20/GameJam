@@ -93,7 +93,7 @@ public abstract class Weapon : MonoBehaviour
         CurrentAmmoCount--;
 
         var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
-        Destroy(bullet, 5f);
+        Destroy(bullet, 0.5f);
         bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
         UpdateAmmo();
 
