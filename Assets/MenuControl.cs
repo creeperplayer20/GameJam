@@ -15,5 +15,10 @@ public class MenuControl : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    static public void LoadScene(string sceneName, bool isStatic)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
 
 }

@@ -3,21 +3,32 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.PlasticSCM.Editor.WebApi;
+using UnityEngine.SceneManagement;
 
 class UserInterface : Player
 {
-    [SerializeField]
-    TMP_Text textHp;
-
     [SerializeField] 
     TMP_Text textAmmo;
 
     [SerializeField]
     Image weaponDisplay;
 
+    private void Start()
+    {
+        UpdateHp();
+    }
+
     public void UpdateHp()
     {
-        textHp.text = "♥ " + HP;
+        textHP.text = HP.ToString();
+        textHP.GetComponentInParent<Slider>().value = HP;
+    }
+
+    static public void UpdateHp(TMP_Text textHp, int HP)
+    {
+        textHp.text = HP.ToString();
+        textHp.GetComponentInParent<Slider>().value = HP;
     }
 
     static public void UpdateAmmo(TMP_Text textAmmo, int currentAmmo ,int maxAmmo)
@@ -31,4 +42,10 @@ class UserInterface : Player
         this.textAmmo.text = currentAmmo + "/" + maxAmmo;
         Debug.Log(this.textAmmo.text);
     }
+
+    static public void StartDead()
+    {
+        MenuControl.LoadScene("DeadScreen", true);
+    }
+
 }
