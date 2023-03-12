@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8705813372307919760}
   - component: {fileID: -5074045554531076053}
   - component: {fileID: -1733774622674720609}
+  - component: {fileID: 901616932517992049}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -74,6 +75,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 0}
+--- !u!114 &901616932517992049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2196537601910516123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16f002496552a84da2a326943019def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyClip:
+  - {fileID: 8300000, guid: a2eea601bdf794748912e0b4b3853099, type: 3}
+  - {fileID: 8300000, guid: 3fbb90be352906b46804f5490d49124b, type: 3}
+  - {fileID: 8300000, guid: a9695dd2c7868124b945e5971ff3b047, type: 3}
+  - {fileID: 8300000, guid: ff1e45a347e28884da53c308d57f5a58, type: 3}
+  - {fileID: 8300000, guid: e8d0bf24406fbf945b5cfc06e291d75e, type: 3}
+  - {fileID: 8300000, guid: 3472d3189e86bcc4e83c65745e0f2747, type: 3}
 --- !u!1001 &5426233121967959959
 PrefabInstance:
   m_ObjectHideFlags: 0

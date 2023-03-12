@@ -8,8 +8,9 @@ public class Rifle : Weapon
     {
         if (Input.GetButton("Fire1"))
             if (currentAmmoCount > 0 && currentShootCooldown <= 0 && !IsReloading)
+            {
                 Shoot();
+                AudioSource.PlayClipAtPoint(shootClip, transform.position, 100f);
+            }    
     }
-
-    
 }

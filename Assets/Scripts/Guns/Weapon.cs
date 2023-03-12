@@ -8,7 +8,11 @@ public abstract class Weapon : MonoBehaviour
 {
     public event Action<Weapon> AmmoCountChanged;
 
-   
+    [SerializeField]
+    public AudioClip shootClip;
+
+    [SerializeField]
+    AudioClip reloadClip;
 
     [SerializeField]
     protected int ammoCount;
@@ -78,7 +82,10 @@ public abstract class Weapon : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
             if (CurrentAmmoCount > 0 && currentShootCooldown <= 0 && !IsReloading)
+            {
                 Shoot();
+                AudioSource.PlayClipAtPoint(shootClip, transform.position, 100f);
+            }        
     }
 
     private void ProcessReloadInput()
@@ -87,6 +94,7 @@ public abstract class Weapon : MonoBehaviour
         {
             currentReloadTime = reloadTime;
             Reload();
+            AudioSource.PlayClipAtPoint(reloadClip, transform.position, 100f);
         }
     }
 
