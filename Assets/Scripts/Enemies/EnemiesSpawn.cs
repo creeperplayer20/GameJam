@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemiesSpawn : MonoBehaviour
 {
@@ -61,5 +62,10 @@ public class EnemiesSpawn : MonoBehaviour
         return randomPoint;
     }
 
-   
+    private void Update()
+    {
+        if(EnemyPool.Count <= 0)
+            SceneManager.LoadScene(3);
+    }
+
 }

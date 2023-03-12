@@ -245,6 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7459c8d06af36174fbfa3b5fa528b8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootClip: {fileID: 8300000, guid: e1601cf7b273f7543bb310acc98b4a25, type: 3}
+  reloadClip: {fileID: 8300000, guid: 3c2448b17b637164da2cb46f3f28d438, type: 3}
   ammoCount: 10
   shootDelay: 0.4
   reloadTime: 2
@@ -1399,6 +1401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   time: 180
+  currtime: 0
   textHP: {fileID: 0}
   textAmmo: {fileID: 0}
   weaponDisplay: {fileID: 0}
@@ -1438,6 +1441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   time: 180
+  currtime: 0
   textHP: {fileID: 2026672388}
   textAmmo: {fileID: 2026672388}
   weaponDisplay: {fileID: 0}
@@ -1554,6 +1558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   time: 180
+  currtime: 0
   textHP: {fileID: 2026672388}
 --- !u!1 &1210417054
 GameObject:
@@ -1613,6 +1618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55030b061176bd24a85f9fc3b76dabb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootClip: {fileID: 8300000, guid: d0df4b3b0aa3c494ea4a9107e2f34704, type: 3}
+  reloadClip: {fileID: 8300000, guid: a757bf06abf4e42489896fac5de47d71, type: 3}
   ammoCount: 28
   shootDelay: 0.2
   reloadTime: 3
