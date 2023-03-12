@@ -12,11 +12,16 @@ public class EnemiesSpawn : MonoBehaviour
     private MeshFilter meshFilter;
     private Mesh mesh;
     private List<GameObject> enemyPool = new List<GameObject>(); // The pool of enemy game objects
-    public List<GameObject> EnemyPool => enemyPool;
+    
     
 
     void Start()
     {
+
+        enemyCount = UserInterface.SecondEnemyCount;
+
+        UserInterface.EnemyCount = enemyCount;
+
         
         // Get a reference to the sphere's mesh filter component
         meshFilter = GetComponent<MeshFilter>();
@@ -60,12 +65,6 @@ public class EnemiesSpawn : MonoBehaviour
         Vector3 randomPoint = transform.TransformPoint(randomVertex);
 
         return randomPoint;
-    }
-
-    private void Update()
-    {
-        if(EnemyPool.Count <= 0)
-            SceneManager.LoadScene(3);
     }
 
 }

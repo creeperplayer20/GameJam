@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 class UserInterface : Player
 {
@@ -13,9 +14,33 @@ class UserInterface : Player
     [SerializeField]
     Image weaponDisplay;
 
+    [SerializeField]
+    public static int EnemyCount;
+
+    [SerializeField]
+    public static int SecondEnemyCount;
+
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         UpdateHp();
+    }
+
+    private void Update()
+    {
+        if (EnemyCount <= 0)
+        {
+            MenuControl.LoadScene("WinScreen", true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            MenuControl.LoadScene("Menu", true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     public void UpdateHp()
@@ -45,6 +70,28 @@ class UserInterface : Player
     static public void StartDead()
     {
         MenuControl.LoadScene("DeadScreen", true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
+    static public void SetDifficulties(int difficulty)
+    {
+        switch (difficulty)
+        {
+            case 0:
+                SecondEnemyCount = 10;
+                break;
+
+            case 1:
+                SecondEnemyCount = 20;
+                break;
+
+            case 2:
+                SecondEnemyCount = 30;
+                break;
+          
+
+
+        }
+    }
 }

@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
         if (collision.collider.tag == "bullet")
         {
             Destroy(gameObject);
-            Debug.Log("fire");
+            UserInterface.EnemyCount--;
         }
     }
 }

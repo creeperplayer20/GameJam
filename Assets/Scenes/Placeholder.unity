@@ -153,11 +153,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dd43b6f83eaf8c64497697443b1d87d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -63.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dd43b6f83eaf8c64497697443b1d87d3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -39.6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dd43b6f83eaf8c64497697443b1d87d3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 849087918}
-  enemyCount: 40
+  enemyCount: 20
   minDistanceFromSurface: 2
   maxDistanceFromSurface: 5
 --- !u!4 &95284454 stripped
@@ -1243,7 +1243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705813372307919760, guid: 70e58abd4b05a5c49860abae19d63f68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.4
+      value: 10.05
       objectReference: {fileID: 0}
     - target: {fileID: 8705813372307919760, guid: 70e58abd4b05a5c49860abae19d63f68, type: 3}
       propertyPath: m_LocalPosition.z
