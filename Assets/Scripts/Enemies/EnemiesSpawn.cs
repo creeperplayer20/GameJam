@@ -11,7 +11,7 @@ public class EnemiesSpawn : MonoBehaviour
     private MeshFilter meshFilter;
     private Mesh mesh;
     private List<GameObject> enemyPool = new List<GameObject>(); // The pool of enemy game objects
-
+    public List<GameObject> EnemyPool => enemyPool;
     
 
     void Start()

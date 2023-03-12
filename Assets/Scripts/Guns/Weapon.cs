@@ -45,7 +45,9 @@ public abstract class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         CurrentAmmoCount = ammoCount;
+        UpdateAmmo();   
     }
 
     protected void Update()

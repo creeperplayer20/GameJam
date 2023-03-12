@@ -1,15 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
+using JetBrains.Annotations;
 
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    private int hp;
-        
+    private int hp = 100;
+
+    [SerializeField]
+    private int time = 180000; // in sec
+    
+    [SerializeField]
+    private float currtime; // in sec
+
+
+    [SerializeField]
+    protected TMP_Text textHP;        
     public int HP
     {
-        get => hp;
+        get
+        {
+            return hp;
+        }
 
         set
         {
@@ -18,35 +33,40 @@ public class Player : MonoBehaviour
             if (value > 0)
                 hp = 100;
 
+
             hp = value;
         }
     }
 
-    private int level;
-
-    int Level
+    private void Awake()
     {
-        get
-        {
-            return Level;
-        }
-
-        set
-        {
-            if (value < 0)
-                Level = 0;
-            if (value > 20)
-                Level = 20;
-        }
+        currtime = time;
+        HitTimer();
     }
 
-    void Start()
+    private void Update()
     {
-        UserInterface ui = new UserInterface();
+        HitTimer();
     }
 
-    void LevelUp(int levels)
+    void HitTimer()
     {
-        Level = Level + levels;
+        currtime -= 1 * Time.deltaTime;
+        HP = (int)((currtime / time) * 100);
+        UpdateHp();
+
+
+        
+
+         if (currtime <= 0 && HP <= 0)
+            UserInterface.StartDead();
     }
+
+
+
+    private void UpdateHp()
+    {
+        UserInterface.UpdateHp(textHP, HP);
+    }
+
 }
