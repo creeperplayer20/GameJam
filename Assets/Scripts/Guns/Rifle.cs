@@ -10,4 +10,6 @@ public class Rifle : Weapon
             if (currentAmmoCount > 0 && currentShootCooldown <= 0 && !IsReloading)
                 Shoot();
     }
+
+    
 }
