@@ -24,7 +24,7 @@ public class EnemiesSpawn : MonoBehaviour
         // Create the pool of enemy game objects
         for (int i = 0; i < enemyCount; i++)
         {
-            GameObject enemy = Instantiate(enemyPrefab, Vector3.zero, Quaternion.identity);
+            GameObject enemy = Instantiate(enemyPrefab, Vector3.zero, new Quaternion(0, Random.Range(1, 360), 0, 0));
             enemy.SetActive(false); // Deactivate the enemy so it's not visible in the scene
             enemyPool.Add(enemy);
         }
@@ -60,4 +60,6 @@ public class EnemiesSpawn : MonoBehaviour
 
         return randomPoint;
     }
+
+   
 }
