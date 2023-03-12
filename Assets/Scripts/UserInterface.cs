@@ -24,4 +24,19 @@ class UserInterface : Player
     {
         textHp.text = "♥ " + HP;
     }
+<<<<<<< Updated upstream
+=======
+
+    static public void UpdateAmmo(TMP_Text textAmmo, int currentAmmo ,int maxAmmo)
+    {
+        textAmmo.text = currentAmmo + "/" + maxAmmo;
+        //Debug.Log(textAmmo.text);
+    }
+
+    public void UpdateAmmo(int currentAmmo, int maxAmmo)
+    {
+        this.textAmmo.text = currentAmmo + "/" + maxAmmo;
+        //Debug.Log(this.textAmmo.text);
+    }
+>>>>>>> Stashed changes
 }

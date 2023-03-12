@@ -293,7 +293,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8891c321e70d7774483fd60ffc74bb06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Weapon: []
+=======
+  ammoText: {fileID: 401075304}
+>>>>>>> Stashed changes
 --- !u!1 &89636028
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +392,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -9.8
+--- !u!114 &95284449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95284442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ef6bd34dba2be409a30b91ce89be2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1546970745}
+  enemyCount: 30
+  minDistanceFromSurface: 1
+  maxDistanceFromSurface: 5
 --- !u!1 &129479122
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +522,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 94e8b543ccfce214cbe3536377799049, type: 3}
       insertIndex: -1
       addedObject: {fileID: 95284443}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 94e8b543ccfce214cbe3536377799049, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 95284449}
   m_SourcePrefab: {fileID: 100100000, guid: 94e8b543ccfce214cbe3536377799049, type: 3}
 --- !u!1 &401075302
 GameObject:
@@ -733,7 +756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &564591792
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1528,6 +1551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   textHp: {fileID: 755134604}
+  textAmmo: {fileID: 0}
   weaponDisplay: {fileID: 89636030}
 --- !u!1 &1210417054
 GameObject:
@@ -1702,6 +1726,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322795759}
   m_CullTransparentMesh: 1
+--- !u!1 &1546970745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2196537601910516123, guid: 70e58abd4b05a5c49860abae19d63f68, type: 3}
+  m_PrefabInstance: {fileID: 582111232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1695594671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,7 +1917,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   textHp: {fileID: 755134604}
-  weaponDisplay: {fileID: 0}
+  textAmmo: {fileID: 401075304}
+  weaponDisplay: {fileID: 89636030}
 --- !u!1 &2111161948
 GameObject:
   m_ObjectHideFlags: 0

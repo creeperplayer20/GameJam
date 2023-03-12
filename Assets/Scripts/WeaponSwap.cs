@@ -32,7 +32,13 @@ public class WeaponSwap : MonoBehaviour
 
         Weapon[index].gameObject.SetActive(true);
 
+<<<<<<< Updated upstream:Assets/Scripts/WeaponSwap.cs
         weaponChanged?.Invoke(Weapon[index]);
+=======
+        UserInterface.UpdateAmmo(ammoText, this.weapons[index].CurrentAmmoCount, this.weapons[index].AmmoCount);
+
+        weaponChanged?.Invoke(weapons[index]);
+>>>>>>> Stashed changes:Assets/Scripts/Guns/WeaponSwap.cs
     }
 
     // Update is called once per frame
